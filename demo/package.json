@@ -1,0 +1,22 @@
+{
+  "nativescript": {
+    "id": "org.nativescript.demo",
+    "tns-android": {
+      "version": "5.4.0"
+    },
+    "tns-ios": {
+      "version": "5.4.2"
+    }
+  },
+  "description": "NativeScript Google Places SDK demo",
+  "dependencies": {
+    "nativescript-google-places-sdk": "file:../src",
+    "nativescript-theme-core": "1.0.6",
+    "tns-core-modules": "5.4.3"
+  },
+  "devDependencies": {
+    "nativescript-dev-typescript": "0.10.0",
+    "nativescript-dev-webpack": "0.24.1"
+  },
+  "gitHead": "8c1a4866a66daab09bf5ef8e5a96472687192373"
+}

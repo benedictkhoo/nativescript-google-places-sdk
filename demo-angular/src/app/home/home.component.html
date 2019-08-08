@@ -1,0 +1,16 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="Home"></Label>
+</ActionBar>
+
+<FlexboxLayout class="page p-x-8" flexDirection="column">
+    <Button class="btn btn-outline" text="Show Autocomplete" (tap)="search()"></Button>
+
+    <ng-container *ngIf="!!place">
+        <Label class="font-weight-bold m-t-8" text="Id"></Label>
+        <Label [text]="place.id"></Label>
+        <Label class="font-weight-bold m-t-8" text="Name"></Label>
+        <Label [text]="place.name"></Label>
+        <Label class="font-weight-bold m-t-8" text="Address"></Label>
+        <Label [text]="place.address"></Label>
+    </ng-container>
+</FlexboxLayout>

@@ -1,0 +1,38 @@
+{
+  "nativescript": {
+    "id": "org.nativescript.demoangular",
+    "tns-android": {
+      "version": "5.4.0"
+    },
+    "tns-ios": {
+      "version": "5.4.2"
+    }
+  },
+  "description": "NativeScript Google Places SDK demo",
+  "dependencies": {
+    "@angular/animations": "8.2.0",
+    "@angular/common": "8.2.0",
+    "@angular/compiler": "8.2.0",
+    "@angular/core": "8.2.0",
+    "@angular/forms": "8.2.0",
+    "@angular/http": "8.0.0-beta.10",
+    "@angular/platform-browser": "8.2.0",
+    "@angular/platform-browser-dynamic": "8.2.0",
+    "@angular/router": "8.2.0",
+    "nativescript-angular": "8.0.1",
+    "nativescript-google-places-sdk": "file:../src",
+    "nativescript-theme-core": "1.0.6",
+    "reflect-metadata": "0.1.13",
+    "rxjs": "6.5.2",
+    "tns-core-modules": "5.4.3",
+    "zone.js": "0.9.1"
+  },
+  "devDependencies": {
+    "@angular/compiler-cli": "8.2.0",
+    "@ngtools/webpack": "8.2.0",
+    "nativescript-dev-typescript": "0.10.0",
+    "nativescript-dev-webpack": "0.24.1",
+    "tns-platform-declarations": "5.4.3"
+  },
+  "gitHead": "8c1a4866a66daab09bf5ef8e5a96472687192373"
+}

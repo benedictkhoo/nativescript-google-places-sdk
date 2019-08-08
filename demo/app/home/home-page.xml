@@ -1,0 +1,16 @@
+<Page class="page" xmlns="http://schemas.nativescript.org/tns.xsd" loaded="loaded">
+    <ActionBar class="action-bar">
+        <Label class="action-bar-title" text="Home"></Label>
+    </ActionBar>
+
+    <FlexboxLayout class="page p-x-8" flexDirection="column">
+        <Button text="Search" tap="search"></Button>
+
+        <Label class="font-weight-bold m-t-8" text="Id" visibility="{{ !!place.id ? 'visible' : 'collapsed' }}"></Label>
+        <Label text="{{ place.id }}" visibility="{{ !!place.id ? 'visible' : 'collapsed' }}"></Label>
+        <Label class="font-weight-bold m-t-8" text="Name" visibility="{{ !!place.name ? 'visible' : 'collapsed' }}"></Label>
+        <Label text="{{ place.name }}" visibility="{{ !!place.name ? 'visible' : 'collapsed' }}"></Label>
+        <Label class="font-weight-bold m-t-8" text="Address" visibility="{{ !!place.address ? 'visible' : 'collapsed' }}"></Label>
+        <Label text="{{ place.address }}" visibility="{{ !!place.address ? 'visible' : 'collapsed' }}"></Label>
+    </FlexboxLayout>
+</Page>
