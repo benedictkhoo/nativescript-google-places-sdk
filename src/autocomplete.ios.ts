@@ -72,7 +72,7 @@ export class PlaceAutocomplete {
 
   static show(options?: ShowOptions): Promise<PlaceResult> {
     return new Promise((resolve, reject) => {
-      let autocompleteController = GMSAutocompleteViewController.new();
+      const autocompleteController = GMSAutocompleteViewController.new();
       let placeFields: GMSPlaceField = GMSPlaceField.All;
 
       this.autocompleteControllerDelegate = <AutocompleteViewControllerDelegateImpl>AutocompleteViewControllerDelegateImpl.new();
