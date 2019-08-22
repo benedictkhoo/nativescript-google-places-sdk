@@ -1,0 +1,17 @@
+<Page class="page" xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:maps="nativescript-google-maps-sdk" loaded="loaded">
+    <Page.actionBar>
+        <ActionBar class="action-bar">
+            <NavigationButton visibility="collapsed"></NavigationButton>
+            <GridLayout columns="auto, *, auto" height="100%" width="100%">
+                <Label class="fas action-bar-item m-r-20 m-y-auto" text="&#xf0c9;" col="0" tap="openSideDrawer" />
+                <Label class="action-bar-title" text="Location Bias" col="1" />
+            </GridLayout>
+        </ActionBar>
+    </Page.actionBar>
+
+    <GridLayout class="p-x-8" rows="auto, *">
+        <Button text="Search" enabled="{{ mapView }}" tap="search" row="0"></Button>
+
+        <maps:mapView bearing="0" tilt="0" mapReady="onMapReady" row="1"></maps:mapView>
+    </GridLayout>
+</Page>

@@ -9,6 +9,12 @@ import * as app from 'tns-core-modules/application';
 import { isAndroid } from 'tns-core-modules/platform';
 import { ANDROID_API_KEY, IOS_API_KEY } from './environment';
 
+declare var GMSServices: any;
+
+if (!isAndroid) {
+  GMSServices.provideAPIKey(IOS_API_KEY);
+}
+
 Place.initialize(isAndroid ? ANDROID_API_KEY : IOS_API_KEY);
 
 app.run({ moduleName: "app-root" });

@@ -1,9 +1,15 @@
 <Page class="page" xmlns="http://schemas.nativescript.org/tns.xsd" loaded="loaded">
-    <ActionBar class="action-bar">
-        <Label class="action-bar-title" text="Home"></Label>
-    </ActionBar>
+    <Page.actionBar>
+        <ActionBar class="action-bar">
+            <NavigationButton visibility="collapsed"></NavigationButton>
+            <GridLayout columns="auto, *, auto" height="100%" width="100%">
+                <Label class="fas action-bar-item m-r-20 m-y-auto" text="&#xf0c9;" col="0" tap="openSideDrawer" />
+                <Label class="action-bar-title" text="Basic" col="1" />
+            </GridLayout>
+        </ActionBar>
+    </Page.actionBar>
 
-    <FlexboxLayout class="page p-x-8" flexDirection="column">
+    <FlexboxLayout class="p-x-8" flexDirection="column">
         <Button text="Search" tap="search"></Button>
 
         <Label class="font-weight-bold m-t-8" text="Id" visibility="{{ !!place.id ? 'visible' : 'collapsed' }}"></Label>

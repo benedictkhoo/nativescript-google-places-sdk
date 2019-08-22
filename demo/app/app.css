@@ -18,3 +18,9 @@ components that have the btn class name.
 .btn {
     font-size: 18;
 }
+
+.fas {
+    font-family: "Font Awesome 5 Free", "fa-solid-900";
+    font-size: 24;
+    font-weight: 900;
+}

@@ -1,0 +1,5 @@
+<FlexboxLayout class="page p-x-8" flexDirection="column">
+  <Button class="btn btn-outline" text="Search" [enabled]="!!mapView" (tap)="search()"></Button>
+
+  <MapView bearing="0" tilt="0" (mapReady)="onMapReady($event)"></MapView>
+</FlexboxLayout>

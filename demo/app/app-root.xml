@@ -1,1 +1,29 @@
-<Frame defaultPage="home/home-page"></Frame>
+<nsDrawer:RadSideDrawer id="sideDrawer" xmlns:nsDrawer="nativescript-ui-sidedrawer" loaded="onLoaded">
+    <nsDrawer:RadSideDrawer.drawerTransition>
+        <nsDrawer:SlideInOnTopTransition/>
+    </nsDrawer:RadSideDrawer.drawerTransition>
+
+    <nsDrawer:RadSideDrawer.drawerContent>
+        <GridLayout rows="*" class="sidedrawer sidedrawer-left">
+            <ScrollView>
+                <StackLayout class="sidedrawer-content">
+                    <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item p-l-15' + (selectedPage === 'Basic' ? ' active': '') }}"
+                        route="basic/basic-page" title="Basic" tap="onNavigationItemTap">
+                        <Label class="fas m-r-20 m-y-auto" text="&#xf121;" col="0" />
+                        <Label class="p-r-10 m-y-auto" text="Basic" col="1" />
+                    </GridLayout>
+
+                    <GridLayout columns="auto, *" class="{{ 'sidedrawer-list-item p-l-15' + (selectedPage === 'Location Bias' ? ' active': '') }}"
+                        route="location-bias/location-bias-page" title="Location Bias" tap="onNavigationItemTap">
+                        <Label class="fas m-r-20 m-y-auto" text="&#xf121;" col="0" />
+                        <Label class="p-r-10 m-y-auto" text="Location Bias" col="1" />
+                    </GridLayout>
+                </StackLayout>
+            </ScrollView>
+        </GridLayout>
+    </nsDrawer:RadSideDrawer.drawerContent>
+
+    <nsDrawer:RadSideDrawer.mainContent>
+        <Frame defaultPage="basic/basic-page"></Frame>
+    </nsDrawer:RadSideDrawer.mainContent>
+</nsDrawer:RadSideDrawer>

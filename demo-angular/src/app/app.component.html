@@ -1,1 +1,29 @@
-<page-router-outlet></page-router-outlet>
+<ActionBar class="action-bar">
+  <NavigationButton visibility="collapsed"></NavigationButton>
+  <GridLayout columns="auto, *, auto" height="100%" width="100%">
+    <Label class="fas action-bar-item m-r-20 m-y-auto" text="&#xf0c9;" col="0" (tap)="openSideDrawer()"></Label>
+    <Label class="action-bar-title" [text]="title" col="1"></Label>
+  </GridLayout>
+</ActionBar>
+
+<RadSideDrawer #sideDrawer>
+  <GridLayout tkDrawerContent rows="*" class="sidedrawer sidedrawer-left">
+    <ScrollView>
+      <StackLayout class="sidedrawer-content">
+        <GridLayout columns="auto, *" class="sidedrawer-list-item p-l-15" [class.active]="isPathActive('basic')"
+          (tap)="goTo('basic')">
+          <Label class="fas m-r-20 m-y-auto" text="&#xf121;" col="0"></Label>
+          <Label class="p-r-10 m-y-auto" text="Basic" col="1"></Label>
+        </GridLayout>
+
+        <GridLayout columns="auto, *" class="sidedrawer-list-item p-l-15" [class.active]="isPathActive('location-bias')"
+          (tap)="goTo('location-bias')">
+          <Label class="fas m-r-20 m-y-auto" text="&#xf121;" col="0"></Label>
+          <Label class="p-r-10 m-y-auto" text="Location Bias" col="1"></Label>
+        </GridLayout>
+      </StackLayout>
+    </ScrollView>
+  </GridLayout>
+
+  <page-router-outlet tkMainContent class="page page-content"></page-router-outlet>
+</RadSideDrawer>
