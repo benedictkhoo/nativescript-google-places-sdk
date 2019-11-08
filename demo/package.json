@@ -2,10 +2,10 @@
   "nativescript": {
     "id": "org.nativescript.demo",
     "tns-android": {
-      "version": "5.4.0"
+      "version": "6.0.0"
     },
     "tns-ios": {
-      "version": "5.4.2"
+      "version": "6.1.0"
     }
   },
   "description": "NativeScript Google Places SDK demo",
@@ -14,12 +14,12 @@
     "nativescript-google-maps-sdk": "2.7.0",
     "nativescript-google-places-sdk": "file:../src",
     "nativescript-theme-core": "1.0.6",
-    "nativescript-ui-sidedrawer": "6.0.0",
-    "tns-core-modules": "5.4.3"
+    "nativescript-ui-sidedrawer": "7.0.0",
+    "tns-core-modules": "6.0.1"
   },
   "devDependencies": {
-    "nativescript-dev-typescript": "0.10.0",
-    "nativescript-dev-webpack": "0.24.1"
+    "nativescript-dev-webpack": "1.0.1",
+    "typescript": "3.4.5"
   },
   "gitHead": "8c1a4866a66daab09bf5ef8e5a96472687192373"
 }
