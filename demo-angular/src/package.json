@@ -2,6 +2,7 @@
   "main": "main.js",
   "discardUncaughtJsExceptions": false,
   "android": {
-    "v8Flags": "--expose_gc"
+    "v8Flags": "--expose_gc",
+    "markingMode": "none"
   }
 }
