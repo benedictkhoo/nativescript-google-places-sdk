@@ -2145,7 +2145,7 @@ declare module com {
               public onCreate(param0: android.os.Bundle): void;
               public onStart(): void;
               public onEnterAmbient(param0: android.os.Bundle): void;
-              public constructor(param0: android.support.v4.app.Fragment, param1: com.google.android.gms.maps.internal.IMapFragmentDelegate);
+              public constructor(param0: global.androidx.core.app.Fragment, param1: com.google.android.gms.maps.internal.IMapFragmentDelegate);
             }
             export class zzb extends java.lang.Object /* com.google.android.gms.dynamic.DeferredLifecycleHelper<com.google.android.gms.maps.SupportMapFragment.zza>*/ {
               public static class: java.lang.Class<com.google.android.gms.maps.SupportMapFragment.zzb>;
@@ -2188,7 +2188,7 @@ declare module com {
           export module SupportStreetViewPanoramaFragment {
             export class zza extends com.google.android.gms.maps.internal.StreetViewLifecycleDelegate {
               public static class: java.lang.Class<com.google.android.gms.maps.SupportStreetViewPanoramaFragment.zza>;
-              public constructor(param0: android.support.v4.app.Fragment, param1: com.google.android.gms.maps.internal.IStreetViewPanoramaFragmentDelegate);
+              public constructor(param0: global.androidx.core.app.Fragment, param1: com.google.android.gms.maps.internal.IStreetViewPanoramaFragmentDelegate);
               public onStop(): void;
               public getStreetViewPanoramaAsync(param0: com.google.android.gms.maps.OnStreetViewPanoramaReadyCallback): void;
               public onCreateView(param0: android.view.LayoutInflater, param1: android.view.ViewGroup, param2: android.os.Bundle): android.view.View;

@@ -3829,7 +3829,7 @@ declare module com {
           export module internal {
             export class et {
               public static class: java.lang.Class<com.google.android.libraries.places.internal.et>;
-              public onScrollStateChanged(param0: android.support.v7.widget.RecyclerView, param1: number): void;
+              public onScrollStateChanged(param0: global.androidx.core.widget.RecyclerView, param1: number): void;
               public constructor(param0: com.google.android.libraries.places.internal.fs);
             }
           }
@@ -4196,19 +4196,19 @@ declare module com {
       export module libraries {
         export module places {
           export module internal {
-            export class fj extends android.support.v7.widget.RecyclerView.Adapter<android.support.v7.widget.RecyclerView.ViewHolder> implements android.widget.Filterable  {
+            export class fj extends global.androidx.core.widget.RecyclerView.Adapter<global.androidx.core.widget.RecyclerView.ViewHolder> implements android.widget.Filterable  {
               public static class: java.lang.Class<com.google.android.libraries.places.internal.fj>;
               public c: number;
-              public onCreateViewHolder(param0: android.view.ViewGroup, param1: number): android.support.v7.widget.RecyclerView.ViewHolder;
-              public registerAdapterDataObserver(param0: android.support.v7.widget.RecyclerView.AdapterDataObserver): void;
+              public onCreateViewHolder(param0: android.view.ViewGroup, param1: number): global.androidx.core.widget.RecyclerView.ViewHolder;
+              public registerAdapterDataObserver(param0: global.androidx.core.widget.RecyclerView.AdapterDataObserver): void;
               public getItemId(param0: number): number;
-              public onBindViewHolder(param0: android.support.v7.widget.RecyclerView.ViewHolder, param1: number): void;
+              public onBindViewHolder(param0: global.androidx.core.widget.RecyclerView.ViewHolder, param1: number): void;
               public getItemViewType(param0: number): number;
               public constructor(param0: com.google.android.libraries.places.internal.ex);
               public getItemCount(): number;
               public a(): com.google.android.libraries.places.internal.fa;
               public b(): com.google.android.libraries.places.internal.fe;
-              public unregisterAdapterDataObserver(param0: android.support.v7.widget.RecyclerView.AdapterDataObserver): void;
+              public unregisterAdapterDataObserver(param0: global.androidx.core.widget.RecyclerView.AdapterDataObserver): void;
             }
           }
         }
@@ -4283,10 +4283,10 @@ declare module com {
           export module internal {
             export class fn {
               public static class: java.lang.Class<com.google.android.libraries.places.internal.fn>;
-              public a: java.util.ArrayList<android.support.v7.widget.RecyclerView.ViewHolder>;
+              public a: java.util.ArrayList<global.androidx.core.widget.RecyclerView.ViewHolder>;
               public isRunning(): boolean;
-              public animateAdd(param0: android.support.v7.widget.RecyclerView.ViewHolder): boolean;
-              public endAnimation(param0: android.support.v7.widget.RecyclerView.ViewHolder): void;
+              public animateAdd(param0: global.androidx.core.widget.RecyclerView.ViewHolder): boolean;
+              public endAnimation(param0: global.androidx.core.widget.RecyclerView.ViewHolder): void;
               public constructor(param0: android.content.res.Resources);
               public endAnimations(): void;
               public runPendingAnimations(): void;
@@ -4401,7 +4401,7 @@ declare module com {
               public f(): void;
               public h(): void;
               public c(param0: com.google.android.libraries.places.internal.fe, param1: com.google.android.libraries.places.internal.eu): void;
-              public constructor(param0: android.support.v7.app.AppCompatActivity, param1: android.os.Bundle, param2: com.google.android.libraries.places.internal.fj, param3: com.google.android.libraries.places.internal.ge, param4: com.google.android.libraries.places.internal.a);
+              public constructor(param0: global.androidx.core.app.AppCompatActivity, param1: android.os.Bundle, param2: com.google.android.libraries.places.internal.fj, param3: com.google.android.libraries.places.internal.ge, param4: com.google.android.libraries.places.internal.a);
               public e(): void;
               public a(param0: com.google.android.libraries.places.api.model.Place): void;
               public m(): void;
@@ -4453,7 +4453,7 @@ declare module com {
               public constructor(param0: string, param1: number, param2: com.google.android.libraries.places.internal.i, param3: boolean, param4: number);
               public c(): string;
               public b(): any;
-              public static a(param0: android.app.Activity): android.support.v7.widget.Toolbar;
+              public static a(param0: android.app.Activity): global.androidx.core.widget.Toolbar;
               public e(): com.google.android.libraries.places.internal.i;
               public f(): boolean;
               public d(): number;
@@ -4621,7 +4621,7 @@ declare module com {
             export class ga extends com.google.android.libraries.places.internal.ny<any> {
               public static class: java.lang.Class<com.google.android.libraries.places.internal.ga>;
               public a(): com.google.android.libraries.places.internal.fz;
-              public b(param0: android.support.v7.app.AppCompatActivity): com.google.android.libraries.places.internal.ga;
+              public b(param0: global.androidx.core.app.AppCompatActivity): com.google.android.libraries.places.internal.ga;
               public b(param0: android.os.Bundle): com.google.android.libraries.places.internal.ga;
               public b(): any;
             }
@@ -4645,7 +4645,7 @@ declare module com {
               public b(param0: com.google.android.libraries.places.internal.dw): com.google.android.libraries.places.internal.gb;
               public b(param0: com.google.android.libraries.places.internal.aw): com.google.android.libraries.places.internal.gb;
               public c(param0: android.content.Context): com.google.android.libraries.places.internal.gb;
-              public static a(param0: android.support.v7.app.AppCompatActivity, param1: android.os.Bundle): com.google.android.libraries.places.internal.fz;
+              public static a(param0: global.androidx.core.app.AppCompatActivity, param1: android.os.Bundle): com.google.android.libraries.places.internal.fz;
               public a(): com.google.android.libraries.places.internal.fx;
               public b(): any;
             }

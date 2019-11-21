@@ -853,7 +853,7 @@ declare module com {
               export class LifecycleActivity {
                 public static class: java.lang.Class<com.google.android.gms.common.api.internal.LifecycleActivity>;
                 public asObject(): any;
-                public asFragmentActivity(): android.support.v4.app.FragmentActivity;
+                public asFragmentActivity(): global.androidx.core.app.FragmentActivity;
                 public constructor(param0: android.app.Activity);
                 public constructor(param0: android.content.ContextWrapper);
                 public isChimera(): boolean;
@@ -4301,7 +4301,7 @@ declare module com {
             public isAdded(): boolean;
             public getTag(): string;
             public isDetached(): boolean;
-            public static wrap(param0: android.support.v4.app.Fragment): com.google.android.gms.dynamic.SupportFragmentWrapper;
+            public static wrap(param0: global.androidx.core.app.Fragment): com.google.android.gms.dynamic.SupportFragmentWrapper;
             public setUserVisibleHint(param0: boolean): void;
           }
         }
