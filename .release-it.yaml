@@ -1,0 +1,27 @@
+hooks:
+  before:init:
+    - npm --prefix src run ci.tslint
+  before:github:release:
+    - npm --prefix publish i
+    - cd publish && ./publish.sh
+
+git:
+  commitArgs:
+    - -S
+  tagArgs:
+    - -s
+
+npm: false
+
+github:
+  release: true
+  assets: ./publish/package/*.tgz
+
+plugins:
+  "@release-it/conventional-changelog":
+    preset: angular
+    infile: CHANGELOG.md
+  "@release-it/bumper":
+    out:
+      - src/package.json
+      - src/package-lock.json
