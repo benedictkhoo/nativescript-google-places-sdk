@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/benedictkhoo/nativescript-google-places-sdk/compare/v2.0.0...v2.1.0) (2020-07-14)
+
+
+### Features
+
+* support iOS UI appearance options ([1d4542f](https://github.com/benedictkhoo/nativescript-google-places-sdk/commit/1d4542f8aeb8111f97bc1572b197bc9cbcc5408e))
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
