@@ -8,6 +8,14 @@ export declare class PlaceAutocomplete {
    *
    * @param options (optional)
    * @param options.fields (optional)
+   * @param options.ios (optional)
+   * @param options.ios.appearance (optional)
+   * @param options.ios.appearance.primaryTextColor (optional)
+   * @param options.ios.appearance.primaryTextHighlightColor (optional)
+   * @param options.ios.appearance.secondaryTextColor (optional)
+   * @param options.ios.appearance.tableCellBackgroundColor (optional)
+   * @param options.ios.appearance.tableCellSeparatorColor (optional)
+   * @param options.ios.appearance.tintColor (optional)
    * @param options.locationBias (optional)
    * @param options.locationBias.southwest
    * @param options.locationBias.northeast

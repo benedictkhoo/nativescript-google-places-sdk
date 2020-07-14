@@ -35,6 +35,16 @@ export interface PlaceResult {
 
 export interface ShowOptions {
   fields?: PlaceFields[];
+  ios?: {
+    appearance?: {
+      primaryTextColor?: any;
+      primaryTextHighlightColor?: any;
+      secondaryTextColor?: any;
+      tableCellBackgroundColor?: any;
+      tableCellSeparatorColor?: any;
+      tintColor?: any;
+    };
+  };
   locationBias?: {
     southwest: PlaceCoordinates,
     northeast: PlaceCoordinates

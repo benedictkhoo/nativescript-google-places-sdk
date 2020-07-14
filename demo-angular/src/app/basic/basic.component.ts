@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { PlaceAutocomplete, PlaceResult } from 'nativescript-google-places-sdk';
+import { PlaceAutocomplete, PlaceResult, ShowOptions } from 'nativescript-google-places-sdk';
 import { from } from 'rxjs';
+import { device } from 'tns-core-modules/platform';
 import { Page } from 'tns-core-modules/ui/page/page';
 
 @Component({
@@ -16,7 +17,27 @@ export class BasicComponent {
     }
 
     search(): void {
-        from(PlaceAutocomplete.show({ fields: ['address', 'id', 'name'] }))
+        const options: ShowOptions = {
+            fields: ['address', 'id', 'name'],
+            ios: { appearance: {} }
+        };
+
+        if (parseInt(device.osVersion, 10) >= 13) {
+            if (UIScreen.mainScreen.traitCollection.userInterfaceStyle === UIUserInterfaceStyle.Dark) {
+                options.ios.appearance.primaryTextColor = UIColor.whiteColor;
+                options.ios.appearance.secondaryTextColor = UIColor.lightGrayColor;
+                options.ios.appearance.tableCellSeparatorColor = UIColor.lightGrayColor;
+                options.ios.appearance.tableCellBackgroundColor = UIColor.darkGrayColor;
+            }
+            else {
+                options.ios.appearance.primaryTextColor = UIColor.blackColor;
+                options.ios.appearance.secondaryTextColor = UIColor.lightGrayColor;
+                options.ios.appearance.tableCellSeparatorColor = UIColor.lightGrayColor;
+                options.ios.appearance.tableCellBackgroundColor = UIColor.whiteColor;
+            }
+        }
+
+        from(PlaceAutocomplete.show(options))
         .subscribe(
             (place) => {
                 if (place) {

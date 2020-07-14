@@ -139,6 +139,14 @@ Place.initialize('GOOGLE_PLACE_API_KEY');
 | Property | Default | Description |
 | --- | --- | --- |
 | fields | undefined | Define the types of field to retrieve. By default will retrieve all types. |
+| ios | undefined | iOS related options |
+| ios.appearance | undefined | iOS appearance options. See [documentation](https://developers.google.com/places/ios-sdk/autocomplete#customize_text_and_background_colors) for more info. |
+| ios.appearance.primaryTextColor | undefined | Primary text color |
+| ios.appearance.primaryTextHighlightColor | undefined | Primary text highlight color |
+| ios.appearance.secondaryTextColor | undefined | Secondary text color |
+| ios.appearance.tableCellBackgroundColor | undefined | Table cell background color |
+| ios.appearance.tableCellSeparatorColor | undefined | Table cell separator color |
+| ios.appearance.tintColor | undefined | Tint color |
 | locationBias.southwest | undefined | Southwest bound |
 | locationBias.northeast | undefined | Northeast bound |
 

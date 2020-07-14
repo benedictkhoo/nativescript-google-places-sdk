@@ -81,6 +81,34 @@ export class PlaceAutocomplete {
       autocompleteController.delegate = this.autocompleteControllerDelegate;
 
       if (options) {
+        if (options.ios && options.ios.appearance) {
+          const appearance = options.ios.appearance;
+
+          if (appearance.primaryTextColor && appearance.primaryTextColor instanceof UIColor) {
+            autocompleteController.primaryTextColor = appearance.primaryTextColor;
+          }
+
+          if (appearance.primaryTextHighlightColor && appearance.primaryTextHighlightColor instanceof UIColor) {
+            autocompleteController.primaryTextHighlightColor = appearance.primaryTextHighlightColor;
+          }
+
+          if (appearance.secondaryTextColor && appearance.secondaryTextColor instanceof UIColor) {
+            autocompleteController.secondaryTextColor = appearance.secondaryTextColor;
+          }
+
+          if (appearance.tableCellBackgroundColor && appearance.tableCellBackgroundColor instanceof UIColor) {
+            autocompleteController.tableCellBackgroundColor = appearance.tableCellBackgroundColor;
+          }
+
+          if (appearance.tableCellSeparatorColor && appearance.tableCellSeparatorColor instanceof UIColor) {
+            autocompleteController.tableCellSeparatorColor = appearance.tableCellSeparatorColor;
+          }
+
+          if (appearance.tintColor && appearance.tintColor instanceof UIColor) {
+            autocompleteController.tintColor = appearance.tintColor;
+          }
+        }
+
         if (options.fields && options.fields.length > 0) {
           const { fields } = options;
           let selectedFields: GMSPlaceField = null;
