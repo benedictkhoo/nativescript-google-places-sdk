@@ -48,6 +48,7 @@ class AutocompleteViewControllerDelegateImpl extends NSObject implements GMSAuto
       priceLevel: place.priceLevel,
       rating: place.rating,
       userRatingsTotal: place.userRatingsTotal,
+      utcOffsetMinutes: place.UTCOffsetMinutes,
       viewport: this.boundsToViewport(place.viewport),
       websiteUri: place.website ? place.website.absoluteString : null
     });
@@ -143,6 +144,10 @@ export class PlaceAutocomplete {
 
           if (fields.indexOf('user_ratings_total') > -1) {
             selectedFields |= GMSPlaceField.UserRatingsTotal;
+          }
+
+          if (fields.indexOf('utc_offset_minutes') > -1) {
+            selectedFields |= GMSPlaceField.UTCOffsetMinutes;
           }
 
           if (fields.indexOf('viewport') > -1) {

@@ -10,6 +10,8 @@ declare class GMSAddressComponent extends NSObject {
 	readonly shortName: string;
 
 	readonly type: string;
+
+	readonly types: NSArray<string>;
 }
 
 declare const enum GMSAutocompleteBoundsMode {
@@ -154,6 +156,8 @@ declare class GMSAutocompleteResultsViewController extends UIViewController impl
 
 	self(): this;
 
+	setAutocompleteBoundsUsingNorthEastCornerSouthWestCorner(NorthEastCorner: CLLocationCoordinate2D, SouthWestCorner: CLLocationCoordinate2D): void;
+
 	updateSearchResultsForSearchController(searchController: UISearchController): void;
 }
 
@@ -277,6 +281,8 @@ declare class GMSAutocompleteTableDataSource extends NSObject implements UITable
 
 	self(): this;
 
+	setAutocompleteBoundsUsingNorthEastCornerSouthWestCorner(NorthEastCorner: CLLocationCoordinate2D, SouthWestCorner: CLLocationCoordinate2D): void;
+
 	sourceTextHasChanged(text: string): void;
 
 	tableViewAccessoryButtonTappedForRowWithIndexPath(tableView: UITableView, indexPath: NSIndexPath): void;
@@ -295,6 +301,10 @@ declare class GMSAutocompleteTableDataSource extends NSObject implements UITable
 
 	tableViewCommitEditingStyleForRowAtIndexPath(tableView: UITableView, editingStyle: UITableViewCellEditingStyle, indexPath: NSIndexPath): void;
 
+	tableViewContextMenuConfigurationForRowAtIndexPathPoint(tableView: UITableView, indexPath: NSIndexPath, point: CGPoint): UIContextMenuConfiguration;
+
+	tableViewDidBeginMultipleSelectionInteractionAtIndexPath(tableView: UITableView, indexPath: NSIndexPath): void;
+
 	tableViewDidDeselectRowAtIndexPath(tableView: UITableView, indexPath: NSIndexPath): void;
 
 	tableViewDidEndDisplayingCellForRowAtIndexPath(tableView: UITableView, cell: UITableViewCell, indexPath: NSIndexPath): void;
@@ -304,6 +314,8 @@ declare class GMSAutocompleteTableDataSource extends NSObject implements UITable
 	tableViewDidEndDisplayingHeaderViewForSection(tableView: UITableView, view: UIView, section: number): void;
 
 	tableViewDidEndEditingRowAtIndexPath(tableView: UITableView, indexPath: NSIndexPath): void;
+
+	tableViewDidEndMultipleSelectionInteraction(tableView: UITableView): void;
 
 	tableViewDidHighlightRowAtIndexPath(tableView: UITableView, indexPath: NSIndexPath): void;
 
@@ -339,7 +351,13 @@ declare class GMSAutocompleteTableDataSource extends NSObject implements UITable
 
 	tableViewPerformActionForRowAtIndexPathWithSender(tableView: UITableView, action: string, indexPath: NSIndexPath, sender: any): void;
 
+	tableViewPreviewForDismissingContextMenuWithConfiguration(tableView: UITableView, configuration: UIContextMenuConfiguration): UITargetedPreview;
+
+	tableViewPreviewForHighlightingContextMenuWithConfiguration(tableView: UITableView, configuration: UIContextMenuConfiguration): UITargetedPreview;
+
 	tableViewSectionForSectionIndexTitleAtIndex(tableView: UITableView, title: string, index: number): number;
+
+	tableViewShouldBeginMultipleSelectionInteractionAtIndexPath(tableView: UITableView, indexPath: NSIndexPath): boolean;
 
 	tableViewShouldHighlightRowAtIndexPath(tableView: UITableView, indexPath: NSIndexPath): boolean;
 
@@ -374,6 +392,8 @@ declare class GMSAutocompleteTableDataSource extends NSObject implements UITable
 	tableViewWillDisplayFooterViewForSection(tableView: UITableView, view: UIView, section: number): void;
 
 	tableViewWillDisplayHeaderViewForSection(tableView: UITableView, view: UIView, section: number): void;
+
+	tableViewWillPerformPreviewActionForMenuWithConfigurationAnimator(tableView: UITableView, configuration: UIContextMenuConfiguration, animator: UIContextMenuInteractionCommitAnimating): void;
 
 	tableViewWillSelectRowAtIndexPath(tableView: UITableView, indexPath: NSIndexPath): NSIndexPath;
 
@@ -424,6 +444,8 @@ declare class GMSAutocompleteViewController extends UIViewController {
 	tableCellSeparatorColor: UIColor;
 
 	tintColor: UIColor;
+
+	setAutocompleteBoundsUsingNorthEastCornerSouthWestCorner(NorthEastCorner: CLLocationCoordinate2D, SouthWestCorner: CLLocationCoordinate2D): void;
 }
 
 interface GMSAutocompleteViewControllerDelegate extends NSObjectProtocol {
@@ -510,6 +532,8 @@ declare class GMSPlace extends NSObject {
 
 	static new(): GMSPlace; // inherited from NSObject
 
+	readonly UTCOffsetMinutes: number;
+
 	readonly addressComponents: NSArray<GMSAddressComponent>;
 
 	readonly attributions: NSAttributedString;
@@ -543,6 +567,10 @@ declare class GMSPlace extends NSObject {
 	readonly viewport: GMSCoordinateBounds;
 
 	readonly website: NSURL;
+
+	isOpen(): GMSPlaceOpenStatus;
+
+	isOpenAtDate(date: Date): GMSPlaceOpenStatus;
 }
 
 declare const enum GMSPlaceField {
@@ -577,6 +605,8 @@ declare const enum GMSPlaceField {
 
 	UserRatingsTotal = 16384,
 
+	UTCOffsetMinutes = 32768,
+
 	All = -1
 }
 
@@ -606,6 +636,15 @@ declare class GMSPlaceLikelihoodList extends NSObject {
 	readonly attributions: NSAttributedString;
 
 	likelihoods: NSArray<GMSPlaceLikelihood>;
+}
+
+declare const enum GMSPlaceOpenStatus {
+
+	Unknown = 0,
+
+	Open = 1,
+
+	Closed = 2
 }
 
 declare class GMSPlacePhotoMetadata extends NSObject {
@@ -644,6 +683,8 @@ declare const enum GMSPlacesAutocompleteTypeFilter {
 }
 
 declare class GMSPlacesClient extends NSObject {
+
+	static SDKLongVersion(): string;
 
 	static SDKVersion(): string;
 
@@ -700,7 +741,9 @@ declare const enum GMSPlacesErrorCode {
 
 	kGMSPlacesIncorrectBundleIdentifier = -10,
 
-	kGMSPlacesLocationError = -11
+	kGMSPlacesLocationError = -11,
+
+	kGMSPlacesInvalidRequest = -12
 }
 
 declare const enum GMSPlacesOpenNowStatus {

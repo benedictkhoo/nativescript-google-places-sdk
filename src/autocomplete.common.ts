@@ -7,6 +7,7 @@ type PlaceFields =
   'price_level' |
   'rating' |
   'user_ratings_total' |
+  'utc_offset_minutes' |
   'viewport' |
   'website_uri';
 
@@ -29,6 +30,7 @@ export interface PlaceResult {
   priceLevel?: number;
   rating?: number;
   userRatingsTotal?: number;
+  utcOffsetMinutes?: number;
   viewport?: PlaceViewport;
   websiteUri?: string;
 }

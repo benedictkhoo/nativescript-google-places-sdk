@@ -160,6 +160,7 @@ phone_number | string | Phone number |
 price_level | number | Pricing |
 rating | number | Rating |
 user_ratings_total | number | Total ratings |
+utc_offset_minutes | number | UTC offset in minutes |
 viewport | object | Viewport |
 website_uri | string | URL |
 

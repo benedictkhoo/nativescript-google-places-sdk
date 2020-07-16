@@ -82,6 +82,10 @@ export class PlaceAutocomplete {
           selectedFields = selectedFields.concat(Place.Field.USER_RATINGS_TOTAL);
         }
 
+        if (fields.indexOf('utc_offset_minutes') > -1) {
+          selectedFields = selectedFields.concat(Place.Field.UTC_OFFSET);
+        }
+
         if (fields.indexOf('viewport') > -1) {
           selectedFields = selectedFields.concat(Place.Field.VIEWPORT);
         }
@@ -125,6 +129,7 @@ export class PlaceAutocomplete {
               priceLevel: place.getPriceLevel() ? place.getPriceLevel().intValue() : null,
               rating: place.getRating() ? place.getRating().doubleValue() : null,
               userRatingsTotal: place.getUserRatingsTotal() ? place.getUserRatingsTotal().intValue() : null,
+              utcOffsetMinutes: place.getUtcOffsetMinutes() ? place.getUtcOffsetMinutes().intValue() : null,
               viewport: this.viewportToPlaceViewport(place.getViewport()),
               websiteUri: place.getWebsiteUri() ? place.getWebsiteUri().toString() : null
             });
