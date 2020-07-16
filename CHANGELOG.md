@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/benedictkhoo/nativescript-google-places-sdk/compare/v2.1.0...v2.1.1) (2020-07-16)
+
+
+### Bug Fixes
+
+* update missing typing properties ([d51153f](https://github.com/benedictkhoo/nativescript-google-places-sdk/commit/d51153fffa1de416ae1e73865fda59891f567153)), closes [#1](https://github.com/benedictkhoo/nativescript-google-places-sdk/issues/1)
+
 # [2.1.0](https://github.com/benedictkhoo/nativescript-google-places-sdk/compare/v2.0.0...v2.1.0) (2020-07-14)
 
 

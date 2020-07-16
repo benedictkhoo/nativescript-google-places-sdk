@@ -1,6 +1,6 @@
 {
 	"name": "nativescript-google-places-sdk",
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"description": "NativesScript plugin for Google Places SDK",
 	"main": "place",
 	"typings": "index.d.ts",
